@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input{
+        @apply w-full p-2 border-2 border-outline-light dark:border-outline-dark rounded-lg text-body-medium
+         text-onSurface-light dark:text-onSurface-dark font-medium md:p-3
+         bg-surfaceVariant-light dark:bg-surfaceVariant-dark focus:outline-0 
+         focus:ring-0 focus:border-2 focus:border-primary-light dark:focus:border-primary-dark
+    }
+    .btn-primary-filled{
+        @apply px-6 py-[10px] rounded-full text-label-large font-medium text-onPrimary-light dark:text-onPrimary-dark bg-primary-light dark:bg-primary-dark hover:bg-primary-light/[0.92] dark:hover:bg-primary-dark/[0.92]
+    }
+    .btn-primary-text{
+        @apply px-4 py-2 rounded-full text-label-medium font-medium text-primary-light hover:bg-primary-light/[0.12] dark:text-primary-dark dark:hover:bg-primary-dark/[0.12]
+    }
+    .btn-error-filled{
+        @apply px-6 py-[10px] rounded-full text-label-large font-medium text-onError-light dark:text-onError-dark bg-error-light dark:bg-error-dark hover:bg-error-light/[0.92] dark:hover:bg-error-dark/[0.92]
+    }
+    .btn-error-text{
+        @apply px-4 py-2 rounded-full text-label-medium font-medium text-error-light dark:text-error-dark hover:bg-error-light/[0.12] dark:hover:bg-error-dark/[0.12]
+    }
+    .label{
+        @apply block text-body-medium font-normal text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark
+    }
 }
